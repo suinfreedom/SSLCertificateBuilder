@@ -1,0 +1,21 @@
+
+Genera i certificati client rispetto al rootCA e serverKey presenti nella dir ../../Certs/ServerCerts/
+
+
+prende in input un file che contiene un seriale per ogni riga.
+crea una directory per ogni device che contiene l'UUID di quel device e una chiave pubblica e una chiave privata per quel device.
+il rootCA è uguale per tutti i device ed si trova nella directory dei certificati server.
+
+
+Usage:
+
+1. modificare il file lista_di_seriali.txt con i deviceId, oppure generare il file contenente la lista dei certificati con lo script genera_lista_certificati.sh passandogli il deviceId del primo, deviceId dell'ultimo e il nome del file dove si vuole salvare la lista.
+	sh genera_lista_certs.sh 900000 915000 tmp.txt
+
+2. lanciare run.sh oppure lanciare lo script generate_all_clients_certs.sh seguito dal nome della lista, es:
+	sh generate_all_clients_certs.sh lista_di_seriali.txt
+
+
+3. nella Directory Dispositivi copiare il contenuto del file sql (modificare l'ultimo carattere: sostituire la virgola con il punto e virgola)
+
+4. modificare la tabella device_uuid

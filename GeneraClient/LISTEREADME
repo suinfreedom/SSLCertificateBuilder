@@ -1,0 +1,23 @@
+
+
+i device di prod sono 90000 - 915000
+
+Le seguenti liste sono state create per i certificati in produzione:
+
+lista_di_seriali_Lug_2020_1.txt:	900100 - 901500
+
+lista_di_seriali_Lug_2020_2.txt:	900000 - 900089
+
+-- quindi fin'ora: 900000 - 901500.
+
+todo: creare da 901501 a 915000 ma a blocchi:
+
+
+lista_di_seriali_Lug_2020_3.txt:	901501 - 902999			//OK
+lista_di_seriali_Lug_2020_4.txt:	903000 - 904999			//OK
+lista_di_seriali_Lug_2020_5.txt:	905000 - 906999			//OK
+lista_di_seriali_Lug_2020_6.txt:	907000 - 908999			//OK
+lista_di_seriali_Lug_2020_7.txt:	909000 - 911999			//OK
+lista_di_seriali_Lug_2020_8.txt:	912000 - 915000			//OK
+
+
