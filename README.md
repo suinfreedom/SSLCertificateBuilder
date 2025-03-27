@@ -1,4 +1,36 @@
+**Certificate Creation and RabbitMQ Broker Configuration Backup Script**
+1. In the Root Directory:
+    generate_client_server_certs.sh: A Bash script for creating server and client certificates. It generates server certificates in the ServerCerts directory and three client certificates in ClientCerts for a single test device.
+
+    GeneraClient/generate_all_client_certs.sh: A client certificate creation script that, when called with a UUID, generates client certificates signed with the RootCA and the server's private key. It takes a list of serial numbers as input, similar to the example lists found in the same directory.
+
+    genera_lista_certs.sh: Generates a list of serial numbers for production devices.
+
+2. Certificate Persistence:
+
+After the above steps, a directory GeneraClient/Dispositivi/ is created, containing a subdirectory for each device. Each subdirectory stores the certificates and the generated UUID for that device. The Common Name (CN) in the certificate includes this UUID along with the server address.
+
+(A key future development is integrating an LDAP plugin into the broker to verify that the UUID in the certificate matches an entry in the LDAP database. This would add an additional layer of security.)
+Cleanup Scripts:
+
+3.   clean.sh: Cleanup scripts that remove generated certificates. Different versions exist, each targeting specific cleanup tasks as indicated by their script names.
+
+4. Auxiliary Scripts:
+   generate_client_certs.sh & generate_server_certs.sh: Auxiliary scripts used to regenerate only specific parts of the certificates if needed.
+
+-----------------------------------------------------------
+IMPORTANT !!!
+
+the CN used to create server certificates must be the same as for clients
+
+
 **Script di creazione dei certificati e bkp di configurazione del broker RabbitMQ.**
+
+-----------------------------------------------------------
+IMPORTANTE !!!
+
+il CN con cui si creano i certificati server deve essere lo stesso dei client
+
 
 
 1. nella root dir:
